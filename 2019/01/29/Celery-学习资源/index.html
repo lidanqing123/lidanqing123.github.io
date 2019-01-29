@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="docker,">
+  <meta name="keywords" content="Hexo, NexT">
 
 
 
@@ -79,18 +79,19 @@
 
 
 
-<meta name="description" content="在生物信息分析方面docker可以做哪些应用?在那些方面可以给我们提供便利?是否有必要转向docker? liheng大神的一段话引发了我的思考  Docker is a bless to complex systems such as the old Apache+MySQL+PHP combo, but is a curse to simple command line tools. For">
-<meta name="keywords" content="docker">
+<meta name="description" content="使用场景在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。 本文要介绍一个强大的分布式任务队列Celery，它可">
 <meta property="og:type" content="article">
-<meta property="og:title" content="docker  or not ?">
-<meta property="og:url" content="http://yoursite.com/2019/01/29/docker-or-not/index.html">
+<meta property="og:title" content="Celery 学习资源">
+<meta property="og:url" content="http://yoursite.com/2019/01/29/Celery-学习资源/index.html">
 <meta property="og:site_name" content="lidanqing Blog">
-<meta property="og:description" content="在生物信息分析方面docker可以做哪些应用?在那些方面可以给我们提供便利?是否有必要转向docker? liheng大神的一段话引发了我的思考  Docker is a bless to complex systems such as the old Apache+MySQL+PHP combo, but is a curse to simple command line tools. For">
+<meta property="og:description" content="使用场景在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。 本文要介绍一个强大的分布式任务队列Celery，它可">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-29T02:36:00.984Z">
+<meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/10/10/1665e8ee8b12546a?imageView2/0/w/1280/h/960/ignore-error/1">
+<meta property="og:updated_time" content="2019-01-29T03:48:57.752Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="docker  or not ?">
-<meta name="twitter:description" content="在生物信息分析方面docker可以做哪些应用?在那些方面可以给我们提供便利?是否有必要转向docker? liheng大神的一段话引发了我的思考  Docker is a bless to complex systems such as the old Apache+MySQL+PHP combo, but is a curse to simple command line tools. For">
+<meta name="twitter:title" content="Celery 学习资源">
+<meta name="twitter:description" content="使用场景在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。 本文要介绍一个强大的分布式任务队列Celery，它可">
+<meta name="twitter:image" content="https://user-gold-cdn.xitu.io/2018/10/10/1665e8ee8b12546a?imageView2/0/w/1280/h/960/ignore-error/1">
 
 
 
@@ -120,13 +121,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2019/01/29/docker-or-not/">
+  <link rel="canonical" href="http://yoursite.com/2019/01/29/Celery-学习资源/">
 
 
 
 
 
-  <title>docker  or not ? | lidanqing Blog</title>
+  <title>Celery 学习资源 | lidanqing Blog</title>
   
 
 
@@ -263,7 +264,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/29/docker-or-not/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/29/Celery-学习资源/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="lidanqing">
@@ -280,7 +281,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">docker  or not ?</h1>
+          <h1 class="post-title" itemprop="name headline">Celery 学习资源</h1>
         
 
         <div class="post-meta">
@@ -292,7 +293,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-29T10:29:00+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-29T11:28:54+08:00">
                 2019-01-29
               </time>
             
@@ -361,14 +362,19 @@
       
 
       
-        <p>在生物信息分析方面docker可以做哪些应用?在那些方面可以给我们提供便利?是否有必要转向docker?</p>
-<p>liheng大神的<a href="http://lh3.github.io/2015/04/25/a-few-hours-with-docker" target="_blank" rel="noopener">一段话</a>引发了我的思考</p>
-<blockquote>
-<p>Docker is a bless to complex systems such as the old Apache+MySQL+PHP combo, but is a curse to simple command line tools. For simple tools, it adds multiple complications (security, kernel version, Dockerfile, large package, inter-process communication, etc) with little benefit.</p>
-</blockquote>
-<blockquote>
-<p>Bioinformatics tools are not rocket science. They are supposed to be simple. If they are not simple, we should encourage better practices rather than live with the problems and resort to docker. I am particularly against dockerizing easy-to-compile tools such as velvet and bwa or well packaged tools such as spades. Another large fraction of tools in C/C++ can be compiled to statically linked binaries or shipped with necessary dynamic libraries (see salifish). While not ideal, these are still better solutions than docker. Docker will be needed for some tools with complex dependencies, but I predict most of such tools will be abandoned by users unless they are substantially better than other competitors, which rarely happens in practice.</p>
-</blockquote>
+        <h1 id="使用场景"><a href="#使用场景" class="headerlink" title="使用场景"></a>使用场景</h1><p>在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。</p>
+<p>本文要介绍一个强大的分布式任务队列Celery，它可以让任务的执行同主程序完全脱离，甚至不在同一台主机内。它通过队列来调度任务，不用担心并发量高时系统负载过大。它可以用来处理复杂系统性能问题，却又相当灵活易用。下面我们就来了解下Celery。</p>
+<h1 id="Celery-是什么？"><a href="#Celery-是什么？" class="headerlink" title="Celery 是什么？"></a>Celery 是什么？</h1><p>Celery（中文是芹菜的意思）是Python语言实现的分布式队列服务，除了支持即时任务，还支持定时任务，Celery 有5个核心角色。<br><img src="https://user-gold-cdn.xitu.io/2018/10/10/1665e8ee8b12546a?imageView2/0/w/1280/h/960/ignore-error/1" alt=""></p>
+<p>记住这5个角色后面理解Celery就轻松了。</p>
+<h2 id="Task"><a href="#Task" class="headerlink" title="Task"></a>Task</h2><p>任务(Task)就是你要做的事情，例如一个注册流程里面有很多任务，给用户发验证邮件就是一个任务，这种耗时的任务就可以交给Celery去处理，还有一种任务是定时任务，比如每天定时统计网站的注册人数，这个也可以交给Celery周期性的处理。</p>
+<h2 id="Broker"><a href="#Broker" class="headerlink" title="Broker"></a>Broker</h2><p>Broker 的中文意思是经纪人，指为市场上买卖双方提供中介服务的人。在Celery中这个角色相当于数据结构中的队列，介于生产者和消费者之间经纪人。例如一个Web系统中，生产者是主程序，它生产任务，将任务发送给 Broker，消费者是 Worker，是专门用于执行任务的后台服务。Celery本身不提供队列服务，一般用Redis或者RabbitMQ来实现队列服务。</p>
+<h2 id="Worker"><a href="#Worker" class="headerlink" title="Worker"></a>Worker</h2><p>Worker 就是那个一直在后台执行任务的人，也成为任务的消费者，它会实时地监控队列中有没有任务，如果有就立即取出来执行。</p>
+<h2 id="Beat"><a href="#Beat" class="headerlink" title="Beat"></a>Beat</h2><p>Beat 是一个定时任务调度器，它会根据配置定时将任务发送给 Broker，等待 Worker 来消费。</p>
+<h2 id="Backend"><a href="#Backend" class="headerlink" title="Backend"></a>Backend</h2><p>Backend 用于保存任务的执行结果，每个任务都有返回值，比如发送邮件的服务会告诉我们有没有发送成功，这个结果就是存在Backend中，当然我们并不总是要关心任务的执行结果。</p>
+<h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><p><a href="http://www.celeryproject.org" target="_blank" rel="noopener">Celery 官网</a></p>
+<p><a href="http://docs.celeryproject.org/en/latest/index.html" target="_blank" rel="noopener">Celery 官方文档英文版</a></p>
+<p><a href="Celery 官方文档中文版">Celery 官方文档中文版</a></p>
+<p><a href="http://python.jobbole.com/tag/celery/" target="_blank" rel="noopener">伯乐在线 celery文章</a></p>
 
       
     </div>
@@ -384,12 +390,6 @@
 
     <footer class="post-footer">
       
-        <div class="post-tags">
-          
-            <a href="/tags/docker/" rel="tag"># docker</a>
-          
-        </div>
-      
 
       
       
@@ -399,8 +399,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/28/常用网站收集/" rel="next" title="常用网站收集">
-                <i class="fa fa-chevron-left"></i> 常用网站收集
+              <a href="/2019/01/29/docker-or-not/" rel="next" title="docker  or not ?">
+                <i class="fa fa-chevron-left"></i> docker  or not ?
               </a>
             
           </div>
@@ -408,10 +408,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/01/29/Celery-学习资源/" rel="prev" title="Celery 学习资源">
-                Celery 学习资源 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -463,8 +459,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
             
@@ -540,6 +545,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#使用场景"><span class="nav-number">1.</span> <span class="nav-text">使用场景</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Celery-是什么？"><span class="nav-number">2.</span> <span class="nav-text">Celery 是什么？</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Task"><span class="nav-number">2.1.</span> <span class="nav-text">Task</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Broker"><span class="nav-number">2.2.</span> <span class="nav-text">Broker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Worker"><span class="nav-number">2.3.</span> <span class="nav-text">Worker</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Beat"><span class="nav-number">2.4.</span> <span class="nav-text">Beat</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Backend"><span class="nav-number">2.5.</span> <span class="nav-text">Backend</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#资料"><span class="nav-number">3.</span> <span class="nav-text">资料</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
