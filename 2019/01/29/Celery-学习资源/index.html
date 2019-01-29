@@ -68,7 +68,7 @@
 
 
 
-  <meta name="keywords" content="Hexo, NexT">
+  <meta name="keywords" content="celery,">
 
 
 
@@ -80,6 +80,7 @@
 
 
 <meta name="description" content="使用场景在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。 本文要介绍一个强大的分布式任务队列Celery，它可">
+<meta name="keywords" content="celery">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Celery 学习资源">
 <meta property="og:url" content="http://yoursite.com/2019/01/29/Celery-学习资源/index.html">
@@ -87,7 +88,7 @@
 <meta property="og:description" content="使用场景在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。 本文要介绍一个强大的分布式任务队列Celery，它可">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/10/10/1665e8ee8b12546a?imageView2/0/w/1280/h/960/ignore-error/1">
-<meta property="og:updated_time" content="2019-01-29T06:21:09.347Z">
+<meta property="og:updated_time" content="2019-01-29T06:52:08.247Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Celery 学习资源">
 <meta name="twitter:description" content="使用场景在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。 本文要介绍一个强大的分布式任务队列Celery，它可">
@@ -293,7 +294,7 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-29T11:28:54+08:00">
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2019-01-29T11:28:00+08:00">
                 2019-01-29
               </time>
             
@@ -396,6 +397,12 @@
     
 
     <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/celery/" rel="tag"># celery</a>
+          
+        </div>
       
 
       
@@ -513,7 +520,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">9</span>
+                  <span class="site-state-item-count">10</span>
                   <span class="site-state-item-name">标签</span>
                 </a>
               </div>
