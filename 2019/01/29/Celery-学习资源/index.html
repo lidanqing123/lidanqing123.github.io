@@ -87,7 +87,7 @@
 <meta property="og:description" content="使用场景在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。 本文要介绍一个强大的分布式任务队列Celery，它可">
 <meta property="og:locale" content="zh-Hans">
 <meta property="og:image" content="https://user-gold-cdn.xitu.io/2018/10/10/1665e8ee8b12546a?imageView2/0/w/1280/h/960/ignore-error/1">
-<meta property="og:updated_time" content="2019-01-29T03:48:57.752Z">
+<meta property="og:updated_time" content="2019-01-29T06:21:09.347Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Celery 学习资源">
 <meta name="twitter:description" content="使用场景在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。 本文要介绍一个强大的分布式任务队列Celery，它可">
@@ -373,8 +373,15 @@
 <h2 id="Backend"><a href="#Backend" class="headerlink" title="Backend"></a>Backend</h2><p>Backend 用于保存任务的执行结果，每个任务都有返回值，比如发送邮件的服务会告诉我们有没有发送成功，这个结果就是存在Backend中，当然我们并不总是要关心任务的执行结果。</p>
 <h1 id="资料"><a href="#资料" class="headerlink" title="资料"></a>资料</h1><p><a href="http://www.celeryproject.org" target="_blank" rel="noopener">Celery 官网</a></p>
 <p><a href="http://docs.celeryproject.org/en/latest/index.html" target="_blank" rel="noopener">Celery 官方文档英文版</a></p>
-<p><a href="Celery 官方文档中文版">Celery 官方文档中文版</a></p>
+<p><a href="http://docs.jinkan.org/docs/celery/index.html" target="_blank" rel="noopener">Celery 官方文档中文版</a></p>
 <p><a href="http://python.jobbole.com/tag/celery/" target="_blank" rel="noopener">伯乐在线 celery文章</a></p>
+<p><a href="https://www.cnblogs.com/forward-wang/p/5970806.html" target="_blank" rel="noopener">Celery 框架学习笔记</a></p>
+<p><a href="https://www.cnblogs.com/jonathan1314/p/7649249.html" target="_blank" rel="noopener">Celery分布式任务队列快速入门</a></p>
+<p><a href="https://blog.csdn.net/freeking101/article/details/74707619" target="_blank" rel="noopener">Python 并行分布式框架 Celery</a></p>
+<p><a href="https://www.cnblogs.com/cwp-bg/p/8759638.html" target="_blank" rel="noopener">python之celery使用详解一</a></p>
+<p><a href="https://juejin.im/post/5bbe18255188255c81391385" target="_blank" rel="noopener">高性能异步框架Celery入坑指南</a></p>
+<p><a href="https://cloud.tencent.com/developer/article/1343719" target="_blank" rel="noopener">在Python中用Celery安排管理后台工作流</a></p>
+<p><a href="https://www.213.name/archives/1105" target="_blank" rel="noopener">笔记：集群部署celery分布式任务队列</a></p>
 
       
     </div>
