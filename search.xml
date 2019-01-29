@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  <entry>
+    <title><![CDATA[Celery 学习资源]]></title>
+    <url>%2F2019%2F01%2F29%2FCelery-%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%2F</url>
+    <content type="text"><![CDATA[使用场景在程序运行过程中，要执行一个很久的任务，但是我们又不想主程序被阻塞，常见的方法是多线程。可是当并发量过大时，多线程也会扛不住，必须要用线程池来限制并发个数，而且多线程对共享资源的使用也是很麻烦的事情。还有就是协程，但是协程毕竟还是在同一线程内执行的，如果一个任务本身就要执行很长时间，而不是因为等待IO被挂起，那其他协程照样无法得到运行。 本文要介绍一个强大的分布式任务队列Celery，它可以让任务的执行同主程序完全脱离，甚至不在同一台主机内。它通过队列来调度任务，不用担心并发量高时系统负载过大。它可以用来处理复杂系统性能问题，却又相当灵活易用。下面我们就来了解下Celery。 Celery 是什么？Celery（中文是芹菜的意思）是Python语言实现的分布式队列服务，除了支持即时任务，还支持定时任务，Celery 有5个核心角色。 记住这5个角色后面理解Celery就轻松了。 Task任务(Task)就是你要做的事情，例如一个注册流程里面有很多任务，给用户发验证邮件就是一个任务，这种耗时的任务就可以交给Celery去处理，还有一种任务是定时任务，比如每天定时统计网站的注册人数，这个也可以交给Celery周期性的处理。 BrokerBroker 的中文意思是经纪人，指为市场上买卖双方提供中介服务的人。在Celery中这个角色相当于数据结构中的队列，介于生产者和消费者之间经纪人。例如一个Web系统中，生产者是主程序，它生产任务，将任务发送给 Broker，消费者是 Worker，是专门用于执行任务的后台服务。Celery本身不提供队列服务，一般用Redis或者RabbitMQ来实现队列服务。 WorkerWorker 就是那个一直在后台执行任务的人，也成为任务的消费者，它会实时地监控队列中有没有任务，如果有就立即取出来执行。 BeatBeat 是一个定时任务调度器，它会根据配置定时将任务发送给 Broker，等待 Worker 来消费。 BackendBackend 用于保存任务的执行结果，每个任务都有返回值，比如发送邮件的服务会告诉我们有没有发送成功，这个结果就是存在Backend中，当然我们并不总是要关心任务的执行结果。 资料Celery 官网 Celery 官方文档英文版 Celery 官方文档中文版 伯乐在线 celery文章 Celery 框架学习笔记 Celery分布式任务队列快速入门 Python 并行分布式框架 Celery python之celery使用详解一 高性能异步框架Celery入坑指南 在Python中用Celery安排管理后台工作流 笔记：集群部署celery分布式任务队列]]></content>
+      <tags>
+        <tag>celery</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[docker or not ?]]></title>
+    <url>%2F2019%2F01%2F29%2Fdocker-or-not%2F</url>
+    <content type="text"><![CDATA[在生物信息分析方面docker可以做哪些应用?在那些方面可以给我们提供便利?是否有必要转向docker? liheng大神的一段话引发了我的思考 Docker is a bless to complex systems such as the old Apache+MySQL+PHP combo, but is a curse to simple command line tools. For simple tools, it adds multiple complications (security, kernel version, Dockerfile, large package, inter-process communication, etc) with little benefit. Bioinformatics tools are not rocket science. They are supposed to be simple. If they are not simple, we should encourage better practices rather than live with the problems and resort to docker. I am particularly against dockerizing easy-to-compile tools such as velvet and bwa or well packaged tools such as spades. Another large fraction of tools in C/C++ can be compiled to statically linked binaries or shipped with necessary dynamic libraries (see salifish). While not ideal, these are still better solutions than docker. Docker will be needed for some tools with complex dependencies, but I predict most of such tools will be abandoned by users unless they are substantially better than other competitors, which rarely happens in practice.]]></content>
+      <tags>
+        <tag>docker</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title><![CDATA[常用网站收集]]></title>
+    <url>%2F2019%2F01%2F28%2F%E5%B8%B8%E7%94%A8%E7%BD%91%E7%AB%99%E6%94%B6%E9%9B%86%2F</url>
+    <content type="text"><![CDATA[流程脚本语言nextflow github网址 强大的生物信息流程定制工具nextflow 初识Nextflow (系列之一) Nextflow的基本认知(系列之二) NextFlow的步骤Process(系列之三) Nextflow实践中遇到的问题(系列之四) Getting Started with Nextflow Snakemake Snakemake Tutorial snakemake使用笔记 CWL Common Workflow Language Getting Started with CWL WDL User Guide Getting Started with WDL WDL入门 WDL学习 GATK官方推荐的workflow语言-WDL 比较 Snakemake vs. Nextflow: strengths and weaknesses workflow management system : WDL, CWL, Ruffus, SnakeMake, etc 资讯 华大基因举办第二届基因组云计算技术开发者大会 DockstoreDockstore, developed by the Cancer Genome Collaboratory, is an open platform used by the GA4GH for sharing Docker-based tools described with the Common Workflow Language (CWL), the Workflow Description Language (WDL), or Nextflow (NFL) Documentation Best Practices HEXO Hexo 中文官方文档 如何优雅地发布Hexo博客 Markdown Markdown 语法说明]]></content>
+      <categories>
+        <category>收集器</category>
+      </categories>
+      <tags>
+        <tag>网址</tag>
+        <tag>nextflow</tag>
+        <tag>Snakemake</tag>
+        <tag>CWL</tag>
+        <tag>WDL</tag>
+        <tag>Dockstore</tag>
+        <tag>hexo</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+</search>
