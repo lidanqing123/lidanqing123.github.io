@@ -88,7 +88,7 @@
 <meta property="og:site_name" content="lidanqing Blog">
 <meta property="og:description" content="简介Anaconda是一个用于科学计算的Python发行版，支持 Linux, Mac, Windows系统，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。Anaconda利用工具/命令conda来进行package和environment的管理，并且已经包含了Python和相关的配套工具。 这里先解释下conda、anaconda这些概念的差">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2019-01-29T16:42:56.599Z">
+<meta property="og:updated_time" content="2019-01-30T01:50:31.400Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Anaconda,  Conda和 Bioconda相关">
 <meta name="twitter:description" content="简介Anaconda是一个用于科学计算的Python发行版，支持 Linux, Mac, Windows系统，提供了包管理与环境管理的功能，可以很方便地解决多版本python并存、切换以及各种第三方包安装问题。Anaconda利用工具/命令conda来进行package和environment的管理，并且已经包含了Python和相关的配套工具。 这里先解释下conda、anaconda这些概念的差">
@@ -358,7 +358,7 @@
                   <span class="post-meta-item-text">字数统计&#58;</span>
                 
                 <span title="字数统计">
-                  890
+                  1k
                 </span>
               
 
@@ -374,7 +374,7 @@
                   <span class="post-meta-item-text">阅读时长 &asymp;</span>
                 
                 <span title="阅读时长">
-                  3
+                  4
                 </span>
               
             </div>
@@ -411,6 +411,11 @@
 <h1 id="conda使用"><a href="#conda使用" class="headerlink" title="conda使用"></a>conda使用</h1><p>这里介绍conda常用的命令操作<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"># 查看conda版本</span><br><span class="line">$ conda --version</span><br><span class="line">conda 4.3.30</span><br><span class="line"></span><br><span class="line"># 查看对应的python默认版本（默认环境的名字是root，注意这个root不是超级管理员的意思）</span><br><span class="line">$ python --version</span><br><span class="line">Python 3.6.3 :: Anaconda, Inc.</span><br></pre></td></tr></table></figure></p>
 <h2 id="conda的环境管理"><a href="#conda的环境管理" class="headerlink" title="conda的环境管理"></a>conda的环境管理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 创建一个名为env_test的环境，指定Python版本是2.7（conda会自动寻找2.7.x中的最新版本）</span><br><span class="line">$ conda create --name env_test python=2.7</span><br><span class="line"></span><br><span class="line"># 查看已安装的环境，当前被激活的环境会显示有一个星号</span><br><span class="line">$ conda info -e</span><br><span class="line"># conda environments:</span><br><span class="line">#</span><br><span class="line">env_test /home/xxxx/.conda/envs/env_test</span><br><span class="line">root * /opt/anaconda3</span><br><span class="line"></span><br><span class="line"># 安装好后，使用source activate激活指定环境</span><br><span class="line">$ source activate env_test</span><br><span class="line"></span><br><span class="line"># 再次查看当前python版本，可以看到系统已经切换到了2.7的环境</span><br><span class="line">$ python --version</span><br><span class="line">Python 2.7.14 :: Anaconda, Inc.</span><br><span class="line"></span><br><span class="line"># 退出当前虚拟环境，返回默认python环境</span><br><span class="line">$ source deactivate</span><br><span class="line"></span><br><span class="line"># 删除一个已有的环境</span><br><span class="line">$ conda remove --name env_test --all</span><br></pre></td></tr></table></figure>
 <h2 id="包管理"><a href="#包管理" class="headerlink" title="包管理"></a>包管理</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"># 查看当前环境下已安装packages</span><br><span class="line">$ conda list</span><br><span class="line"></span><br><span class="line"># 查找package信息</span><br><span class="line">$ conda search numpy</span><br><span class="line"></span><br><span class="line"># 安装package</span><br><span class="line">$ conda install numpy</span><br><span class="line"></span><br><span class="line"># 安装指定版本package</span><br><span class="line">$ conda install numpy=1.13.3</span><br><span class="line"></span><br><span class="line"># 更新package</span><br><span class="line">$ conda update numpy</span><br><span class="line"></span><br><span class="line"># 删除package</span><br><span class="line">$ conda remove numpy</span><br><span class="line"></span><br><span class="line">另外，</span><br><span class="line">$ conda install Keras # 安装keras, 会顺带装上tensorflow, h5py, hdf5等</span><br><span class="line">$ conda install pillow # 安装PIL</span><br><span class="line">$ conda install opencv # 安装cv2</span><br></pre></td></tr></table></figure>
+<h2 id="环境移植"><a href="#环境移植" class="headerlink" title="环境移植"></a>环境移植</h2><p>值得一提的是自己建立的软件环境可以很方便移植到另外一台电脑!</p>
+<p>首先通过<code>source activate target_env</code>要分享的环境<code>target_env</code>，然后输入下面的命令会在当前工作目录下生成一个<code>environment.yml</code>文件</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env export &gt; environment.yml</span><br></pre></td></tr></table></figure>
+<p>小伙伴拿到<code>environment.yml</code>文件后，将该文件放在工作目录下，可以通过以下命令从该文件创建环境 </p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda env create -f environment.yml</span><br></pre></td></tr></table></figure>
 <h1 id="相关资料"><a href="#相关资料" class="headerlink" title="相关资料"></a>相关资料</h1><p><a href="https://www.anaconda.com/" target="_blank" rel="noopener">Anaconda 官网</a></p>
 <p><a href="http://bioconda.github.io/" target="_blank" rel="noopener">bioconda 官网</a></p>
 <p><a href="https://www.jianshu.com/p/2f3be7781451" target="_blank" rel="noopener">Anaconda安装使用</a></p>
@@ -606,7 +611,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Anaconda-Miniconda-安装"><span class="nav-number">2.</span> <span class="nav-text">Anaconda(Miniconda)安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置国内镜像源"><span class="nav-number">3.</span> <span class="nav-text">设置国内镜像源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Conda-三方源"><span class="nav-number">3.1.</span> <span class="nav-text">Conda 三方源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conda使用"><span class="nav-number">4.</span> <span class="nav-text">conda使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#conda的环境管理"><span class="nav-number">4.1.</span> <span class="nav-text">conda的环境管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包管理"><span class="nav-number">4.2.</span> <span class="nav-text">包管理</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关资料"><span class="nav-number">5.</span> <span class="nav-text">相关资料</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#简介"><span class="nav-number">1.</span> <span class="nav-text">简介</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#Anaconda-Miniconda-安装"><span class="nav-number">2.</span> <span class="nav-text">Anaconda(Miniconda)安装</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#设置国内镜像源"><span class="nav-number">3.</span> <span class="nav-text">设置国内镜像源</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#Conda-三方源"><span class="nav-number">3.1.</span> <span class="nav-text">Conda 三方源</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#conda使用"><span class="nav-number">4.</span> <span class="nav-text">conda使用</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#conda的环境管理"><span class="nav-number">4.1.</span> <span class="nav-text">conda的环境管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#包管理"><span class="nav-number">4.2.</span> <span class="nav-text">包管理</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#环境移植"><span class="nav-number">4.3.</span> <span class="nav-text">环境移植</span></a></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#相关资料"><span class="nav-number">5.</span> <span class="nav-text">相关资料</span></a></li></ol></div>
             
 
           </div>
@@ -643,7 +648,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">2.1k word</span>
+    <span title="Site words total count">2.2k word</span>
   
 </div>
 
