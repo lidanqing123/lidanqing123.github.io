@@ -1,6 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[使用Sphinx + reST编写文档]]></title>
+    <url>%2F2019%2F02%2F14%2F%E4%BD%BF%E7%94%A8Sphinx-reST%E7%BC%96%E5%86%99%E6%96%87%E6%A1%A3%2F</url>
+    <content type="text"><![CDATA[Welcome 使用者说: “为这个伟大的工具而干杯，因为她让所有的程序员们愿意 编写文档！” Sphinx是一个工具，她能够轻易地创建智慧和优雅的文档，她是出自Georg Brandl之手，在BSD许可证下授权。 她最初是为了新版的python文档， 因此在python项目的文档具有完美的特性，但是同样支持c/c++，目前正在计划增加对其他的语言的支持。 理所当然，本页面也是使用Sphinx创造自reStructuredText格式源！Sphinx具有如下的特点： 输出格式： 超文本标记语言 (包括Windows HTML帮助)，LaTeX (可打印的PDF版本)，手册页，纯文本 丰富的交叉引用： 语义标记以及针对函数，类，引用，词汇表（术语）和相似的信息块的自动链接 层次结构： 简单的文本树定义，就能自动地链接到同层（兄弟姐妹）、上一层（父母）以及下一层（子女）的文本位置 自动生成目录： 通用索引以及语言模块的目录 代码高亮： 代码自动高亮，通过使用 Pygments 扩展功能： 自动测试的代码片段，包括从Python模块（API文档）的文档字符串 Sphinx 使用 reStructuredText 作为她的标记语言，她的优点大部分是来自于reStructuredText 以及reStructuredText的解析和转换工具（套件）Docutils的强大以及简单明了。 文档初熟Sphinx &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 目录基本功能的概述 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 全部的内容 搜索页 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 通用索引搜索全文 &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 所有的函数，类，词条 你也能下载PDF格式的Sphinx文档：一种PDF 版本 是由LaTeX Sphinx生成，另一种PDF 版本 是由rst2pdf生成。 实例用Sphinx生成文档的项目能够在 Projects using Sphinx上找到。 想要查看Sphinx源文件长得什么样的话，可以在除本欢迎页外的任何页面上使用“显示网页源代码”。 你也许对这份十分不错 教程感兴趣，它是由matplotlib的开发者编写，是使用了Sphinx创建地自定义的文档。 下载 SphinxSphinx是一个可用的 easy-install包在 Python Package Index. 源码能够在下面的地址中找到： http://bitbucket.org/birkenfeld/sphinx/。]]></content>
+      <tags>
+        <tag>Sphinx</tag>
+        <tag>reStructuredText</tag>
+        <tag>编写文档</tag>
+        <tag>python</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[Jinja2中文文档]]></title>
     <url>%2F2019%2F02%2F14%2FJinja2%E4%B8%AD%E6%96%87%E6%96%87%E6%A1%A3%2F</url>
     <content type="text"><![CDATA[原文出处：欢迎来到 Jinja2 Jinja2 是一个现代的，设计者友好的，仿照 Django 模板的 Python 模板语言。 它速度快，被广泛使用，并且提供了可选的沙箱模板执行环境保证安全:123456&lt;title&gt;&#123;% block title %&#125;&#123;% endblock %&#125;&lt;/title&gt;&lt;ul&gt;&#123;% for user in users %&#125; &lt;li&gt;&lt;a href=&quot;&#123;&#123; user.url &#125;&#125;&quot;&gt;&#123;&#123; user.username &#125;&#125;&lt;/a&gt;&lt;/li&gt;&#123;% endfor %&#125;&lt;/ul&gt; 特性: 沙箱中执行 强大的 HTML 自动转义系统保护系统免受 XSS 模板继承 及时编译最优的 python 代码 可选提前编译模板的时间 易于调试。异常的行数直接指向模板中的对应行。 可配置的语法 如果你接触过其它的基于文本的模板语言，比如 Smarty 或 Django ，那么 Jinja2 会让你有 宾至如归的感觉。Jinja2 通过坚持 Python 原则来保证对设计者和开发者友好，为模板环境添加有帮助的功能。]]></content>
