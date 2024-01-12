@@ -5,7 +5,7 @@ export default navbar([
   {
     text: "博文",
     icon: "pen-to-square",
-    prefix: "/posts/",
+    link: "/posts/",
   },
   {
     text: "beetle 文档",
