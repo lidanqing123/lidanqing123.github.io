@@ -12,7 +12,7 @@ export default hopeTheme({
 
   iconAssets: "fontawesome-with-brands",
 
-  logo: /logo.png,
+  logo: "/logo.png",
 
   repo: "https://github.com/lidanqing123/lidanqing123.github.io",
 
