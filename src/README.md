@@ -7,7 +7,7 @@ heroImage: /logo.png
 heroText: 丹青的博客
 heroFullScreen: true
 tagline: 你可以在这里放置你的口号与标语
-bgImage: ""
+bgImage: /assets/images/bgImage.jpg
 projects:
   - icon: /beetle_logo.png
     name: beetle
